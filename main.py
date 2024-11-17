@@ -23,6 +23,10 @@ init()
 @app.post("/")
 async def home():
     return "This app is up and running"
+
+@app.post("/hello")
+async def hellouser():
+    return "Hello User"
 #curl -X POST iri-webapp-bhczgvgudbf3g6h6.eastus2-01.azurewebsites.net -H "Content-Type: application/json" -d @input.json
 @app.post("/predict")
 async def predict(data: InputData):
